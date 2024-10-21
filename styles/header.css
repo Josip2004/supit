@@ -1,0 +1,36 @@
+.header{
+  background-color: #151515;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.left-section{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.link-section a{ 
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 4px; /*udaljava ikonu i link*/
+}
+
+.link-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px; 
+}
+
+.link-icon{
+  height: 17px;
+}
