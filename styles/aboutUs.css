@@ -1,0 +1,114 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+.imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.right-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.right-link-section{
+  margin: 20px;
+}
+
+.right-link-section a{
+  text-decoration: none;
+  color: orange;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.campus-img{
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  left: 0;
+  height: 390px;
+  width: 100vw;
+  object-fit: cover;
+}
+
+main{
+  margin: 0 auto;
+  margin-top: 420px;
+  max-width: 100%;
+}
+
+.aboutUs-title{
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 4px solid orange;
+  padding-bottom: 30px;
+  margin: auto;
+  margin-bottom: 70px;
+  width: 1100px;
+}
+
+#ourValues{
+  color: rgb(182, 28, 28);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.intro{
+  background-color: rgb(247, 246, 246);
+  padding: 75px 0;
+
+}
+
+.intro p{
+  width: 1100px;
+  margin: auto;
+  line-height: 30px;
+  font-family: "Imperial Script", cursive;
+  font-size: 27px;
+  padding: 30px;
+}
+
+.values{
+  padding: 40px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.value-container{
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 3px;
+  margin: 5px;
+  width: 26.3%;
+  padding: 15px;
+}
+
+.value-title{
+  padding-bottom: 15px;
+  font-size: 19px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(209, 208, 208);
+}
+
+.value-text{
+  color: rgb(112, 111, 111);
+  text-align:justify;
+}
+
+.history-title{
+  font-weight: bold;
+  text-align: center;
+  padding: 40px;
+}
