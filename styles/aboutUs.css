@@ -2,8 +2,9 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-
 }
+
+
 
 .imperial-script-regular {
   font-family: "Imperial Script", cursive;
@@ -36,7 +37,7 @@ body{
   top: 0;
   left: 0;
   height: 390px;
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -64,7 +65,7 @@ main{
 
 .intro{
   background-color: rgb(247, 246, 246);
-  padding: 75px 0;
+  padding: 60px 0;
 
 }
 
@@ -78,20 +79,21 @@ main{
 }
 
 .values{
-  padding: 40px;
   display: flex;
-  justify-content: flex-start;
-  gap: 0px;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 30px;
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .value-container{
   border: 1px solid rgb(209, 208, 208);
   border-radius: 3px;
   margin: 5px;
-  width: 26.3%;
+  flex: 0 0 25%;
   padding: 15px;
 }
 
@@ -105,10 +107,209 @@ main{
 .value-text{
   color: rgb(112, 111, 111);
   text-align:justify;
+  line-height: 25px;
+  font-size: 14px;
 }
 
 .history-title{
+  color: rgb(182, 28, 28);
   font-weight: bold;
   text-align: center;
   padding: 40px;
+}
+
+.history-info{
+  background-color: rgb(247, 246, 246);
+  padding: 55px 0;
+}
+
+.history-text{
+  font-family: "Imperial Script", cursive;
+  font-size: 27px;
+  padding: 25px;
+  width: 1100px;
+  margin: auto;
+}
+
+.history-box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.history-box{
+  flex: 0 0 28%; /*flex-grow, flex-shrink, flex-basis*/
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.box-title{
+  padding-bottom: 15px;
+  font-size: 19px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(209, 208, 208);
+}
+
+.box-title span{
+  color: rgb(17, 94, 156);
+}
+
+.box-text{
+  color: rgb(112, 111, 111);
+  text-align:justify;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.algebra-group-title{
+  color: rgb(182, 28, 28);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.algebra-group-info{
+  background-color: rgb(247, 246, 246);
+  padding: 55px 0;
+  margin-bottom: 70px;
+}
+
+.algebra-group-text{
+  font-family: "Imperial Script", cursive;
+  width: 1100px;
+  font-size: 27px;
+  margin: auto;
+  padding: 25px;
+}
+
+.algebra-partners{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 100%;
+  max-width: 1700px;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.algebra-box{
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 250px;
+}
+
+.algebra-box div{
+  align-items: center;
+}
+
+.algebra-partners-img{
+  width: 280px;
+  object-fit: contain;
+  padding: 15px;
+}
+
+.algebra-partners-img-small{
+  width: 85px;
+  padding: 15px;
+}
+
+.algebra-partners-img-mid{
+  width: 210px;
+  padding: 15px;
+}
+
+.algebra-box-title{
+  border-bottom: 1px solid rgb(209, 208, 208);
+  padding: 10px 0px;
+  text-align: left;
+  height: 43px;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.reach-us-title{
+  color: rgb(182, 28, 28);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.reach-us-container{
+  margin-bottom: 300px;
+}
+
+.parallax-background{
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+
+.parallax-img{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  transform: translateX(-50%);
+  min-height: 100%; 
+  object-fit: cover; 
+  z-index: -1;
+}
+
+footer{
+  position: relative;
+  height: 300px;
+}
+
+.footer-img{
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+
+.parallax-background{
+  background-image: url('../pictures/kakoDoNas.jpg');
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+.content{
+  flex: 1;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 60px;
+}
+
+.content-color{
+  flex: 1;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(182, 28, 28);
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  text-align: center;
+  padding: 50px;
 }
