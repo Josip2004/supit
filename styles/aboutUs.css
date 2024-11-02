@@ -57,10 +57,26 @@ main{
   width: 1100px;
 }
 
-#ourValues{
-  color: rgb(182, 28, 28);
-  text-align: center;
+.title-icon{
+  height: 24px;
+  margin-bottom: -4px;
+  padding-right: 4px;
+}
+
+.title-img1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
+}
+
+#ourValues,
+#history-title,
+#algebra-group-title,
+#reach-us-title{
+  color: rgb(182, 28, 28);
+  font-size: 31px;
+  font-weight: bold;
 }
 
 .intro{
@@ -111,11 +127,13 @@ main{
   font-size: 14px;
 }
 
-.history-title{
-  color: rgb(182, 28, 28);
-  font-weight: bold;
-  text-align: center;
-  padding: 40px;
+.history-icon, .reach-icon{
+  height: 30px;
+  padding-right: 5px;
+}
+
+.group-icon{
+  height: 50px;
 }
 
 .history-info{
@@ -163,16 +181,8 @@ main{
 
 .box-text{
   color: rgb(112, 111, 111);
-  text-align:justify;
   line-height: 25px;
   font-size: 14px;
-}
-
-.algebra-group-title{
-  color: rgb(182, 28, 28);
-  font-weight: bold;
-  text-align: center;
-  padding-bottom: 30px;
 }
 
 .algebra-group-info{
@@ -205,7 +215,6 @@ main{
   flex-direction: column;
   width: 360px;
   align-items: center;
-  justify-content: flex-start;
   height: 250px;
 }
 
@@ -247,25 +256,21 @@ main{
 }
 
 .reach-us-container{
-  margin-bottom: 300px;
+  position: relative;
+  overflow: hidden;
+  height: 1200px;
 }
 
 .parallax-background{
   position: relative;
-  height: 700px;
+  background-image: url('../pictures/kakoDoNas.jpg');
   overflow: hidden;
-}
+  height: 110vh;            
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.parallax-img{
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
-  transform: translateX(-50%);
-  min-height: 100%; 
-  object-fit: cover; 
-  z-index: -1;
 }
 
 footer{
@@ -282,16 +287,6 @@ footer{
   width: 100%;
   object-fit: cover;
   height: 300px;
-}
-
-.parallax-background{
-  background-image: url('../pictures/kakoDoNas.jpg');
-  min-height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 0;
 }
 
 .content{
@@ -313,3 +308,65 @@ footer{
   text-align: center;
   padding: 50px;
 }
+
+.info-box-container{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px auto;
+}
+
+.info-box{
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 2px;
+  width: 600px;
+  background-color: white;
+  padding: 20px;
+}
+
+.info-box-text{
+  width: 450px;
+  margin: auto;
+  color: rgb(112, 111, 111);
+  line-height: 25px;
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+.info-box-title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info-box-title{
+  width: 300px;
+}
+
+.title-img{
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.title-img img{
+  width: 20px;
+  height: 20px;
+  padding-right: 8px;
+}
+
+.info-box-text span{
+  color: blue;
+}
+
+.location-algebra{
+  display: flex;
+  justify-content: center;
+}
+
+iframe{
+  width: 1295px;
+  height: 400px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
