@@ -258,7 +258,8 @@ main{
 .reach-us-container{
   position: relative;
   overflow: hidden;
-  height: 1200px;
+  height: 1100px;
+
 }
 
 .parallax-background{
@@ -270,7 +271,6 @@ main{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 footer{
@@ -365,7 +365,7 @@ footer{
 
 iframe{
   width: 1295px;
-  height: 400px;
+  height: 320px;
   margin: 0 auto;
   margin-bottom: 30px;
 }

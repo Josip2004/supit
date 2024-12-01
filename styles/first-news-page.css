@@ -1,0 +1,139 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.news-container{
+  position: relative;
+  top: 80px;
+  left: 0;
+  right: 0;
+  height: 300px;
+  margin-bottom: 135px;
+}
+
+.news-header{
+  z-index: -10;
+  position: absolute;
+  height: 330px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.text-news{
+  position: absolute;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0px 2px 5px rgb(0, 0, 0);
+  text-align: left;
+  font-size: 40px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.worldSkills-title{
+  margin: auto;
+  color: black;
+  font-size: 35px;
+  width: 900px;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 4px solid orange;
+}
+
+section{
+  width: 1055px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.paragraph-text{
+  margin-top: 50px;
+  color: rgb(65, 64, 64);
+  text-align: left;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.image-container-news{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.image-box{
+  overflow: hidden;
+  height: 100px;
+  width: 250px;
+  transition: box-shadow 0.3s ;
+  border-radius: 5px;
+}
+
+.image-box:hover{
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.image-news{
+  height: 100%;
+  opacity: 85%;
+  transition: opacity 0.3s, transform 0.3s ease;
+  object-fit: cover;
+}
+
+.image-news:hover{
+  opacity: 100%;
+  transform: scale(1.1);
+}
+
+.video-section{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.video{
+  align-items: center;
+  height: 290px;
+}
+
+footer{
+  position: relative;
+  height: 305px;
+  margin-top: auto;
+}
+
+.footer-img{
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 305px;
+}
+
+.content{
+  flex: 1;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 60px;
+}
+
+.content-color{
+  flex: 1;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(182, 28, 28);
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  text-align: center;
+  padding: 60px;
+}
