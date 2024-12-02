@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/login.css">
   <link rel="stylesheet" href="styles/header.css">
-  <title>SUPIT</title>
+  <title>Document</title>
 </head>
 <body>
+
   <header class="header">
     <div class="left-section">
       <div class="link-section">
@@ -37,18 +38,22 @@
     </div>
   </header>
 
-  <main>
-    <video class="background-video" autoplay loop>
-      <source src="videos/typingOnlaptop.mp4" type="video/mp4">
-    </video>
+  <div class="container">
+    <h2>PRIJAVA KORISNIKA</h2>
+    <label class="text-label" for="email">Korisničko ime</label>
+    <input type="email" id="email" name="email" required>
 
-    <div class="headline">
-      Budi izvrstan u onom što vidiš!
-    </div>
+    <label class="text-label" for="password">Lozinka</label>
+    <input type="password" id="password" name="password" required>
 
-    <div class="text-inside">
-      ZAISKRI.
-    </div>
-  </main>
+    <button class="login-button">Prijavi se</button>
+    <p>Nemaš račun? <span><a href="register.html">Registriraj se</a></span></p>
+  </div>
+
+  <footer>
+    <img class="footer-img" src="pictures/zaiskri-bg.jpg" alt="footer">
+    <div class="content">BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</div>
+    <div class="content-color">ZAISKRI</div>
+  </footer>
 </body>
 </html>
