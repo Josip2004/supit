@@ -44,7 +44,7 @@ body{
   margin-right: -0.2em;
   width: 8ch;
   white-space: nowrap;
-  display: inline-block;
+  display: inline-block; /*2 DISPLAYA IMAS!*/
   color: rgb(182, 28, 28);
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
   font-weight: bold;

@@ -1,10 +1,12 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
-
-
 
 .imperial-script-regular {
   font-family: "Imperial Script", cursive;
@@ -17,17 +19,56 @@ body{
   justify-content: space-between;
   align-items: center;
   margin-right: 35px;
+  opacity: 0;
+  animation: pop-left 1s 1.5s linear forwards; /*forwards osigura da ostane u tom stanju i poslije*/
+}
+
+@keyframes pop-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  40% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px)
+  }
+  60% {
+    transform: translateX(10px)
+  }
+  70% {
+    transform: translateX(-6px)
+  }
+  80% {
+    transform: translateX(4px)
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .right-link-section{
   margin: 20px;
 }
 
-.right-link-section a{
+.right-link{
   text-decoration: none;
   color: orange;
   font-size: 16px;
   font-weight: bold;
+}
+
+.right-link:hover{
+  color: yellow;
+}
+
+#ourValues,
+#history-title,
+#algebra-group-title,
+#reach-us-title{
+  scroll-margin-top: 150px;
 }
 
 .campus-img{
@@ -39,6 +80,18 @@ body{
   height: 390px;
   width: 100%;
   object-fit: cover;
+  animation: img-pop-down 0.8s linear;
+}
+
+@keyframes img-pop-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 main{
@@ -55,6 +108,16 @@ main{
   margin: auto;
   margin-bottom: 70px;
   width: 1100px;
+  animation: title-pop-up 0.8s linear;
+}
+
+@keyframes title-pop-up {
+  0%{
+    transform: translateY(60%);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 
 .title-icon{
@@ -68,6 +131,11 @@ main{
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+
+}
+
+.history-container{
+  margin-bottom: 40px;
 }
 
 #ourValues,
@@ -82,16 +150,25 @@ main{
 .intro{
   background-color: rgb(247, 246, 246);
   padding: 60px 0;
-
 }
 
-.intro p{
+.intro-text{
   width: 1100px;
   margin: auto;
   line-height: 30px;
   font-family: "Imperial Script", cursive;
   font-size: 27px;
   padding: 30px;
+  animation: appear-text 1s ease;
+}
+
+@keyframes appear-text {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .values{
@@ -101,7 +178,7 @@ main{
   padding: 30px;
   width: 100%;
   max-width: 1500px;
-  margin: 0 auto;
+  margin: 33px auto;
   justify-content: center;
 }
 
@@ -142,11 +219,18 @@ main{
 }
 
 .history-text{
+  opacity: 0;
   font-family: "Imperial Script", cursive;
   font-size: 27px;
   padding: 25px;
   width: 1100px;
   margin: auto;
+  transition: 1s ease;
+}
+
+/* kada je vidljiva cijela sekcija  */
+.history-text-visible{
+  opacity: 1;
 }
 
 .history-box-container{
@@ -187,16 +271,22 @@ main{
 
 .algebra-group-info{
   background-color: rgb(247, 246, 246);
-  padding: 55px 0;
+  padding: 40px 0;
   margin-bottom: 70px;
 }
 
 .algebra-group-text{
+  opacity: 0;
   font-family: "Imperial Script", cursive;
   width: 1100px;
   font-size: 27px;
   margin: auto;
   padding: 25px;
+  transition: 1s ease;
+}
+
+.algebra-group-text-visible{
+  opacity: 1;
 }
 
 .algebra-partners{
@@ -370,3 +460,8 @@ iframe{
   margin-bottom: 30px;
 }
 
+ @media screen and (max-width: 1200px){
+  iframe {
+    width: 800px;
+  }
+} 

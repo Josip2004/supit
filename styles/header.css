@@ -34,3 +34,7 @@
 .link-icon{
   height: 17px;
 }
+
+.link-section a:hover{
+  color: orange;
+}
