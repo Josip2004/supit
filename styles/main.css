@@ -56,13 +56,13 @@ body{
 }
 
 @keyframes typing-headline {
-  from {width: 0}
-  to {width: 25ch}
+  0% {width: 0}
+  100% {width: 25ch}
 }
 
 @keyframes typing-inside {
-  from {width: 0}
-  to {width: 8ch}
+  0% {width: 0}
+  100% {width: 8ch}
 }
 
 @keyframes blinking-headline{

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles/header.css">
   <title>Document</title>
 </head>
-<body>
+<body onload="getPics()">
   <header class="header">
     <div class="left-section">
       <div class="link-section">
@@ -67,12 +67,19 @@
 
     <div class="image-container-news">
       <div class="image-box">
-        <img class="image-news" src="pictures/novost1.jpg" alt="picture1">
+        <img class="image-news js-first-img" src="pictures/novost1.jpg" alt="picture1" onclick="FullView(this.src)">
       </div>
       <div class="image-box">
 
-        <img class="image-news" src="pictures/galerija1.jpg" alt="">
+        <img class="image-news js-second-img" src="pictures/galerija1.jpg" alt="picture2" onclick="FullView(this.src)">
       </div>
+    </div>
+
+    <div id="full-screen">
+      <img id="full-screen-image" src="" alt="">
+      <span id="close-button" onclick="closeImage()">&times;</span>
+      <span id="next-image" onclick="changeImage()">&#x2192;</span>
+      <span id="previous-image" onclick="changeImage()">&#x2190;</span>
     </div>
 
     <div class="video-section">
@@ -88,5 +95,7 @@
     <div class="content">BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</div>
     <div class="content-color">ZAISKRI</div>
   </footer>
+
+  <script src="scripts/first-news-page.js"></script>
 </body>
 </html>
