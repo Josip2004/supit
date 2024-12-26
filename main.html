@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/contact.css">
   <title>SUPIT</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
 
       <div class="link-section">
         <img class="link-icon" src="pictures/contact.png">
-        <a href="">Kontakt</a>
+        <a onclick="showContact()">Kontakt</a>
       </div>
     </div>
   </header>
@@ -50,5 +51,53 @@
       ZAISKRI.
     </div>
   </main>
+
+  <!--Contact display-->
+  <div id="overlay">
+    <div id="contact-modal" class="modal">
+      <div class="contact-header">
+        <img class="contact-email-img" src="pictures/contactMail.png" alt="">
+        <p class="title-contact">Kontaktirajte nas</p>
+      </div>
+  
+      <form id="contact-form" method="post" action="https://www.fulek.com/mvc/supit/project-contact-form">
+        <div class="title-of-input">
+          <label for="FullName">Puno ime</label>
+        </div>
+        <input class="input-text" type="text" id="name" name="FullName" required>
+  
+        <div class="title-of-input">
+          <label for="Email">Email</label>
+        </div>
+        <input class="input-text" type="text" id="email" name="Email" required>
+        
+  
+        <div class="title-of-input">
+          <label for="importance">Važnost poruke</label>
+        </div>
+  
+        <select name="importance" id="importance">
+          <option value="Visoka">Visoka</option>
+          <option value="Srednja">Srednja</option>
+          <option value="Niska">Niska</option>
+        </select>
+  
+        <div class="title-of-input">
+          <label for="Message">Poruka</label>
+        </div>
+        <textarea class="message-area" name="Message"></textarea>
+        
+        <label class="title-of-label" for="ReceiveNewsletter">Želim primati obavijesti</label>
+        <input class="message-checkbox" type="checkbox" name="ReceiveNewsletter">
+  
+        <div class="buttons-section">
+          <input type="submit" class="send-button" value="Pošalji">
+          <button class="cancel-button">Odustani</button>
+        </div>
+    </form>
+    </div>
+  </div>
+
+  <script src="scripts/contact.js"></script>
 </body>
 </html>

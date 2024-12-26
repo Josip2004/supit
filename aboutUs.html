@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/aboutUs.css">
   <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/contact.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
@@ -37,7 +38,7 @@
 
       <div class="link-section">
         <img class="link-icon" src="pictures/contact.png">
-        <a href="">Kontakt</a>
+        <a onclick="showContact()">Kontakt</a>
       </div>
     </div>
 
@@ -538,7 +539,6 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2953.4507771228837!2d15.93855673499791!3d45.81082308224022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1salgebra!5e0!3m2!1sen!2shr!4v1730549288291!5m2!1sen!2shr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-        
       </div>
 
      
@@ -548,7 +548,54 @@
         <div class="content-color">ZAISKRI</div>
       </footer>
 
+      <!--Contact display-->
+      <div id="overlay">
+        <div id="contact-modal" class="modal">
+          <div class="contact-header">
+            <img class="contact-email-img" src="pictures/contactMail.png" alt="">
+            <p class="title-contact">Kontaktirajte nas</p>
+          </div>
+      
+          <form id="contact-form" method="post" action="https://www.fulek.com/mvc/supit/project-contact-form">
+            <div class="title-of-input">
+              <label for="FullName">Puno ime</label>
+            </div>
+            <input class="input-text" type="text" id="name" name="FullName" required>
+      
+            <div class="title-of-input">
+              <label for="Email">Email</label>
+            </div>
+            <input class="input-text" type="text" id="email" name="Email" required>
+            
+      
+            <div class="title-of-input">
+              <label for="importance">Važnost poruke</label>
+            </div>
+      
+            <select name="importance" id="importance">
+              <option value="Visoka">Visoka</option>
+              <option value="Srednja">Srednja</option>
+              <option value="Niska">Niska</option>
+            </select>
+      
+            <div class="title-of-input">
+              <label for="Message">Poruka</label>
+            </div>
+            <textarea class="message-area" name="Message"></textarea>
+            
+            <label class="title-of-label" for="ReceiveNewsletter">Želim primati obavijesti</label>
+            <input class="message-checkbox" type="checkbox" name="ReceiveNewsletter">
+      
+            <div class="buttons-section">
+              <input type="submit" class="send-button" value="Pošalji">
+              <button class="cancel-button">Odustani</button>
+            </div>
+        </form>
+        </div>
+      </div>
+
       <script src="scripts/aboutUs.js"></script>
+      <script src="scripts/contact.js"></script>
   </main>
 </body>
 </html>

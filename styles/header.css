@@ -22,6 +22,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0 4px; /*udaljava ikonu i link*/
+  cursor: pointer;
 }
 
 .link-section{
