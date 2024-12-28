@@ -8,7 +8,6 @@ body{
 main{
   margin: 0 auto;
   margin-top: 80px;
-  max-width: 100%;
 }
 
 .news-title{
@@ -94,6 +93,7 @@ main{
   margin-bottom: -12px;
 }
 
+/*FOOTER:*/
 footer{
   position: relative;
   height: 305px;
@@ -115,7 +115,7 @@ footer{
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
   text-align: center;
   padding-top: 60px;
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -127,7 +127,7 @@ footer{
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
   text-align: center;
   padding: 60px;
-  position: absolute;
+  position: relative;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -146,16 +146,13 @@ footer{
     width: 90%;
   }
 
+
   .content,
   .content-color{
-    font-size: 35px;
+    font-size: 45px;
   }
 
   .content{
-    margin-bottom: 80px;
-  }
-
-  .content-color{
-    margin-top: 30px;
+    margin-bottom: 10px;
   }
 }

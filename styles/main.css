@@ -28,7 +28,8 @@ body{
   width: 25ch;
   margin-right: -0.2em;
   white-space: nowrap;
-  animation: typing-headline 3s steps(32, end) forwards, blinking-headline 0.75s step-end infinite 0.5s forwards,
+  animation: typing-headline 3s steps(32, end) forwards,
+  blinking-headline 0.75s step-end infinite 0.5s forwards,
   remove-border 0.01s forwards 3s;
   color: white;
   font-size: 45px;
@@ -51,7 +52,8 @@ body{
   display: block;
   font-size: 45px;
   opacity: 0;
-  animation: typing-inside 1.2s steps(8, end) forwards 3s, blinking-inside 0.75s step-end infinite  0.5s forwards,
+  animation: typing-inside 1.2s steps(8, end) forwards 3s,
+  blinking-inside 0.75s step-end infinite  0.5s forwards,
   border-visible 0s forwards 3.1s;
 }
 

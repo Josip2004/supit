@@ -18,10 +18,26 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 35px;
   opacity: 0;
+  margin-right: 35px;
+  margin-left: 20px;
+  flex: 1 1 auto;
+  max-width: 500px;
+  flex-wrap: wrap;
   animation: pop-left 1s 1.5s linear forwards; /*forwards osigura da ostane u tom stanju i poslije*/
 }
+
+.right-link-section{
+  padding: 5px;
+}
+
+.right-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 @keyframes pop-left {
   0% {
@@ -50,7 +66,8 @@ body{
 }
 
 .right-link-section{
-  margin: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .right-link{
@@ -349,54 +366,58 @@ main{
   position: relative;
   overflow: hidden;
   height: 1100px;
-
+  margin: 0;
 }
 
 .parallax-background{
   position: relative;
   background-image: url('../pictures/kakoDoNas.jpg');
   overflow: hidden;
-  height: 110vh;            
+  height: 100%;            
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/*FOOTER:*/
 footer{
   position: relative;
-  height: 300px;
+  height: 305px;
+  margin-top: auto;
 }
 
 .footer-img{
   position: absolute;
   z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
   object-fit: cover;
-  height: 300px;
+  height: 305px;
 }
 
 .content{
-  flex: 1;
   font-size: 50px;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
   text-align: center;
   padding-top: 60px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .content-color{
-  flex: 1;
   font-size: 50px;
   font-weight: bold;
   color: rgb(182, 28, 28);
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
   text-align: center;
-  padding: 50px;
+  padding: 60px;
+  position: relative;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .info-box-container{
@@ -460,8 +481,22 @@ iframe{
   margin-bottom: 30px;
 }
 
- @media screen and (max-width: 1200px){
+ @media screen and (max-width: 1100px){
   iframe {
     width: 800px;
   }
+
+  footer{
+    height: 250px;
+  }
+
+  .content,
+  .content-color{
+    font-size: 45px;
+  }
+
+  .content{
+    margin-bottom: 10px;
+  }
 } 
+
