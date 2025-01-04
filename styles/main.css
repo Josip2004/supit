@@ -57,33 +57,53 @@ body{
   border-visible 0s forwards 3.1s;
 }
 
+
+/*Animacije za headline*/
 @keyframes typing-headline {
-  0% {width: 0}
+  0% {
+    width: 0
+  }
   100% {width: 25ch}
 }
 
-@keyframes typing-inside {
-  0% {width: 0}
-  100% {width: 8ch}
-}
-
 @keyframes blinking-headline{
-  50% {border-color: transparent;}
-  
-}
-
-@keyframes blinking-inside{
-  50% {border-color: transparent;}
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes remove-border {
-  0% { border-right: .1em solid white; }
-  100% { border-right: none; }
+  0% { 
+    border-right: .1em solid white; 
+  }
+  100% { 
+    border-right: none; 
+  }
+}
+
+/*Animacije za text-inside*/
+@keyframes typing-inside {
+  0% {
+    width: 0
+  }
+  100% {
+    width: 8ch
+  }
+}
+
+@keyframes blinking-inside{
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes border-visible {
-  0% { opacity: 0; } 
-  100% { opacity: 1; } 
+  0% { 
+    opacity: 0; 
+  } 
+  100% { 
+    opacity: 1; 
+  } 
 }
 
 
