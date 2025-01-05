@@ -23,7 +23,7 @@ const register = (data) => {
 }
 
 formForRegister.addEventListener('submit', (event) => {
-  event.preventDefault(); //sprjeci refreshanje stranice
+  event.preventDefault(); //sprijeci refreshanje stranice
 
   const userData = {
     username: username.value,

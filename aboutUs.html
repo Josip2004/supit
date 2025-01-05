@@ -565,19 +565,19 @@
             <div class="title-of-input">
               <label for="FullName">Puno ime</label>
             </div>
-            <input class="input-text" type="text" id="name" name="FullName" required>
+            <input class="input-text" type="text" id="FullName" name="FullName" required>
       
             <div class="title-of-input">
               <label for="Email">Email</label>
             </div>
-            <input class="input-text" type="text" id="email" name="Email" required>
+            <input class="input-text" type="text" id="Email" name="Email" required>
             
       
             <div class="title-of-input">
-              <label for="importance">Važnost poruke</label>
+              <label for="Importance">Važnost poruke</label>
             </div>
       
-            <select name="importance" id="importance">
+            <select name="Importance" id="Importance" required>
               <option value="Visoka">Visoka</option>
               <option value="Srednja">Srednja</option>
               <option value="Niska">Niska</option>
@@ -586,10 +586,10 @@
             <div class="title-of-input">
               <label for="Message">Poruka</label>
             </div>
-            <textarea class="message-area" name="Message"></textarea>
+            <textarea class="message-area" id="Message" name="Message"></textarea>
             
             <label class="title-of-label" for="ReceiveNewsletter">Želim primati obavijesti</label>
-            <input class="message-checkbox" type="checkbox" name="ReceiveNewsletter">
+            <input class="message-checkbox" id="ReceiveNewsletter" type="checkbox" name="ReceiveNewsletter" value="on" checked>
       
             <div class="buttons-section">
               <input type="submit" class="send-button" value="Pošalji">
@@ -601,6 +601,7 @@
 
       <script src="scripts/aboutUs.js"></script>
       <script src="scripts/contact.js"></script>
+      <script src="scripts/header.js"></script>
   </main>
 </body>
 </html>

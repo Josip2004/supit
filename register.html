@@ -33,6 +33,11 @@
         <a href="news.html">Novosti</a>
       </div>
 
+      <div class="link-section curriculum">
+        <img class="link-icon" src="pictures/info.png">
+        <a href="curriculum.html">Nastavni plan</a>
+      </div>
+
       <div class="link-section">
         <img class="link-icon" src="pictures/contact.png">
         <a onclick="showContact()">Kontakt</a>
@@ -59,8 +64,8 @@
     <div class="content-color">ZAISKRI</div>
   </footer>
 
-  <!--Contact display-->
-  <div id="overlay">
+   <!--Contact display-->
+   <div id="overlay">
     <div id="contact-modal" class="modal">
       <div class="contact-header">
         <img class="contact-email-img" src="pictures/contactMail.png" alt="">
@@ -71,19 +76,19 @@
         <div class="title-of-input">
           <label for="FullName">Puno ime</label>
         </div>
-        <input class="input-text" type="text" id="name" name="FullName" required>
+        <input class="input-text" type="text" id="FullName" name="FullName" required>
   
         <div class="title-of-input">
           <label for="Email">Email</label>
         </div>
-        <input class="input-text" type="text" id="email" name="Email" required>
+        <input class="input-text" type="text" id="Email" name="Email" required>
         
   
         <div class="title-of-input">
-          <label for="importance">Važnost poruke</label>
+          <label for="Importance">Važnost poruke</label>
         </div>
   
-        <select name="importance" id="importance">
+        <select name="Importance" id="Importance" required>
           <option value="Visoka">Visoka</option>
           <option value="Srednja">Srednja</option>
           <option value="Niska">Niska</option>
@@ -92,10 +97,10 @@
         <div class="title-of-input">
           <label for="Message">Poruka</label>
         </div>
-        <textarea class="message-area" name="Message"></textarea>
+        <textarea class="message-area" id="Message" name="Message"></textarea>
         
         <label class="title-of-label" for="ReceiveNewsletter">Želim primati obavijesti</label>
-        <input class="message-checkbox" type="checkbox" name="ReceiveNewsletter">
+        <input class="message-checkbox" id="ReceiveNewsletter" type="checkbox" name="ReceiveNewsletter" value="on" checked>
   
         <div class="buttons-section">
           <input type="submit" class="send-button" value="Pošalji">
@@ -107,5 +112,6 @@
 
   <script src="scripts/contact.js"></script>
   <script src="scripts/register.js"></script>
+  <script src="scripts/header.js"></script>
 </body>
 </html>

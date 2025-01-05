@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const updateHeader = () => {
+const updateHeader = () => {
     const isLogged = sessionStorage.getItem('token');
     const username = sessionStorage.getItem('username');
     const loginSectionHeader = document.querySelector('.link-section:first-child');
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       logoutElement.addEventListener('click', () => {
         sessionStorage.removeItem('token');
-        sessionStorage.removeItem('token');
-        location.reload(); //za refresh ponovno ucita url
+        sessionStorage.removeItem('username');
+        location.reload(); //za refresh, ponovno ucita url
       });
 
       //dodaj elemente u header
@@ -31,19 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
       loginSectionHeader.appendChild(logoutElement);
       loginSectionHeader.appendChild(usernameText);
 
-      curriculum.style.display = 'flex';
+      curriculum.style.display = 'flex';//prikazi Nastavni plan u headeru
     }
     else { //kada nismo prijavljeni
-
+      //vec je napisan html kod u headeru kada nismo ulogirani
     }
   }
 
   updateHeader();
 });
 
-
-
-{/* <div class="link-section">
-<a href="login.html">Prijavi se</a>
-<img class="link-icon" src="pictures/login.png">
-</div> */}

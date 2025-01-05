@@ -38,7 +38,8 @@
   margin-right: 27px; 
 }
 
-.link-icon{
+.link-icon,
+.img-logged-in{
   height: 17px;
 }
 
@@ -48,4 +49,9 @@
 
 .curriculum{
   display: none;
+}
+
+.username-text{
+  font-weight: bold;
+  color: rgb(82, 168, 218);
 }
