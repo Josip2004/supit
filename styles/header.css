@@ -13,6 +13,10 @@
   max-width: 100%;
 }
 
+.header.expanded {
+  height: 240px;
+}
+
 .left-section{
   display: flex;
   align-items: center;
@@ -54,4 +58,109 @@
 .username-text{
   font-weight: bold;
   color: rgb(82, 168, 218);
+}
+
+.hamburger-menu{
+  display: none;
+  position: fixed;
+  top: 4%;
+  left: 10px;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0px 10px 0px 0px;
+  height: 40px;
+  width: 40px;
+}
+
+.ham-img{
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger-menu {
+    display: flex; /* Prikazuje menu */
+    margin-left: 20px;
+  }
+
+  /*Responzivnost kada smo ulogirani*/
+  .header.logged .left-section{
+    align-items: start;
+    width: 140px;
+  }
+
+  .header.logged .link-section a {
+    font-size: 13px;
+  }
+
+  .header.logged .link-section{
+    margin: 6px;
+    padding: 0px;
+  }
+
+  .header.logged .link-section:first-child{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header.expanded{
+    display: flex;
+    justify-content: center;
+  }
+
+  /*Responzivnost kada Nismo ulogirani*/
+  .left-section {
+    display: none; /* Sakriva navigaciju po defaultu */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .left-section.active {
+    display: flex; /* Prikazuje navigaciju kada je aktivna */
+  }
+
+  .link-section {
+    padding: 10px 0;
+  }
+
+  .link-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/*Kada je vece od 768px*/
+@media (min-width: 768px) {
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .header.expanded{
+    height: 80px;
+  }
+
+  .left-section {
+    display: flex;
+  }
+
+  .left-section.active {
+    display: flex; /* Prikazuje navigaciju kada je aktivna */
+  }
+
+  .link-section {
+    padding: 10px 0;
+  }
+
+  .link-icon {
+    width: 20px;
+    height: 20px;
+  }
 }

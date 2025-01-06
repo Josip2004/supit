@@ -10,7 +10,7 @@ const register = (data) => {
     data: JSON.stringify(data), // pretvaramo u string
     success(response){
       if(response.isSuccess) {
-        window.location.href = 'login.html';
+        location.replace('login.html');
       }
       else{
         alert('Pogreška pri registraciji.');
@@ -31,3 +31,4 @@ formForRegister.addEventListener('submit', (event) => {
   }
   register(userData);
 });
+

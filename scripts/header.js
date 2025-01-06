@@ -6,6 +6,7 @@ const updateHeader = () => {
     const curriculum = document.querySelector('.curriculum');
 
     if(isLogged){
+      document.querySelector('.header').classList.add('logged'); // radi responzive
       loginSectionHeader.innerHTML = '';
 
       const imgLoggedIn = document.createElement('img');
@@ -35,9 +36,22 @@ const updateHeader = () => {
     }
     else { //kada nismo prijavljeni
       //vec je napisan html kod u headeru kada nismo ulogirani
+      document.querySelector('.header').classList.remove('logged');
     }
   }
 
   updateHeader();
 });
 
+
+function toggleMenu() {
+  const menu = document.querySelector('.left-section');
+  menu.classList.toggle('active'); //toggle dodaje ako ne postoji ili ne dodaje ako postoji
+}
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+hamburgerMenu.addEventListener('click', () => {
+  toggleMenu();
+
+  document.querySelector('.header').classList.toggle('expanded');
+});

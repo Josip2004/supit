@@ -28,9 +28,9 @@ body{
   width: 25ch;
   margin-right: -0.2em;
   white-space: nowrap;
-  animation: typing-headline 3s steps(32, end) forwards,
-  blinking-headline 0.75s step-end infinite 0.5s forwards,
-  remove-border 0.01s forwards 3s;
+  animation: typing-headline 3s steps(32, end) forwards, /*32 koraka, end-svaki korak se zavrsi prije nego sto krene dalje*/
+  blinking-headline 0.75s step-end infinite 0.5s forwards, /*zadrzava posljednje stanje animacije*/
+  remove-border 0.01s forwards 3s; /*nakon 3s nestaje border*/
   color: white;
   font-size: 45px;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
@@ -105,6 +105,29 @@ body{
     opacity: 1; 
   } 
 }
+
+/*responzivnost za mobitele*/
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .headline {
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-inside {
+    font-size: 23px;
+    text-align: center;
+  }
+
+}
+
+
+
+
 
 
 
