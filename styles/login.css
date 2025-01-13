@@ -1,37 +1,35 @@
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
-.container{
-  position: absolute;
+.container {
   width: 350px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -90%);
+  transform: translate(100%, -50%);
   animation: appear-login 1s linear;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
 }
 
 @keyframes appear-login {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-h2{
+h2 {
   margin-bottom: 50px;
   font-size: 28px;
   font-weight: 100;
 }
 
-input{
+input {
   margin: 13px 0;
   height: 31px;
   width: 345px;
@@ -40,26 +38,26 @@ input{
   transition: box-shadow 0.2 ease, border-color 0.2 ease, background-color 0.2s ease;
 }
 
-input:focus{
+input:focus {
   outline: none;
   border-color: rgba(0, 123, 255, 0.8);
   box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
 }
 
-input:valid{
+input:valid {
   background-color: rgb(220, 235, 252);
 }
 
-input:invalid{
+input:invalid {
   background-color: rgb(255, 255, 255);
 }
 
-.text-label{
+.text-label {
   font-weight: bold;
   margin-bottom: 6px;
 }
 
-.login-button{
+.login-button {
   width: 100%;
   background-color: black;
   color: white;
@@ -73,33 +71,30 @@ input:invalid{
   transition: opacity 0.3s ease;
 }
 
-.login-button:hover{
+.login-button:hover {
   opacity: 100%;
 }
 
-p, a{
+p, a {
   font-weight: bold;
 }
 
-span a{
+span a {
   text-decoration: none;
   color: rgb(71, 149, 223);
   transition: opacity 0.2s ease;
 }
 
-span a:hover{
+span a:hover {
   opacity: 70%;
 }
-
 
 /*FOOTER:*/
 footer{
   position: relative;
-  height: 305px;
+  height: 320px;
   margin-top: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 270px;
 }
 
 .footer-img{
@@ -107,7 +102,7 @@ footer{
   z-index: -1;
   width: 100%;
   object-fit: cover;
-  height: 305px;
+  height: 320px;
 }
 
 .content{
@@ -135,17 +130,31 @@ footer{
   transform: translateX(-50%);
 }
 
-@media screen and (max-width: 1100px) {
+@media (max-width: 768px) {
+  .content,
+  .content-color {
+    font-size: 30px;
+  }
+
+  .footer {
+    height: 250px; /* Smanjujemo visinu footera na manjim ekranima */
+  }
+
+  .content {
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 895px){
+
+
   .content,
   .content-color{
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .content{
-    margin-bottom: 80px;
-  }
-
-  .content-color{
-    margin-top: 30px;
+    margin-bottom: 10px;
   }
 }

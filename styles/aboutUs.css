@@ -486,8 +486,16 @@ footer{
 
  @media screen and (max-width: 768px){
   iframe {
-    flex: 1;
+    width: 80%;
     height: 250px;
+  }
+
+  .reach-us-container{
+    padding-bottom: 320px;
+  }
+
+  .parallax-background{
+    padding-bottom: 235px;
   }
 
   .aboutUs-title{
@@ -555,13 +563,23 @@ footer{
     max-width: 98%;
   }
 
-  footer{
-    margin-top: 15px;
-  }
 
 } 
 
 @media (min-width: 768px) and (max-width: 1140px){
+  iframe {
+    width: 80%;
+    height: 250px;
+  }
+
+  .reach-us-container{
+    padding-bottom: 375px;
+  }
+
+  .parallax-background{
+    padding-bottom: 410px;
+  }
+
   .content,
   .content-color{
     font-size: 40px;
@@ -606,5 +624,20 @@ footer{
 
   .history-box{
     flex: 0 0 40%;
+  }
+}
+
+@media (min-width: 1140px) and (max-width: 1315px){
+  iframe {
+    width: 80%;
+    height: 250px;
+  }
+
+  .reach-us-container{
+    padding-bottom: 375px;
+  }
+
+  .parallax-background{
+    padding-bottom: 410px;
   }
 }

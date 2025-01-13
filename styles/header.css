@@ -62,8 +62,8 @@
 
 .hamburger-menu{
   display: none;
-  position: fixed;
-  top: 4%;
+  position: absolute;
+  top: 20px;
   left: 10px;
   justify-content: center;
   border: none;
@@ -162,5 +162,14 @@
   .link-icon {
     width: 20px;
     height: 20px;
+  }
+
+   /*Responzivnost kada smo ulogirani*/
+  
+
+  .header{
+    display: flex;
+    justify-content: center;
+    height: 90px;
   }
 }

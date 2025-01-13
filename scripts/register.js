@@ -32,3 +32,4 @@ formForRegister.addEventListener('submit', (event) => {
   register(userData);
 });
 
+

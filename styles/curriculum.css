@@ -8,22 +8,33 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
+} 
 
-section{
-  flex: 1;
-  padding: 20px;
+main{
+  margin: 0 auto;
+  width: 80%;
+  max-width: 100%;
 }
 
 .curriculum-title{
   margin: 100px auto;
   color: black;
   font-size: 35px;
-  width: 60%;
+  width: 70%;
   text-align: center;
   padding-bottom: 15px;
   border-bottom: 4px solid orange;
   animation: title-pop-up 0.8s linear;
+  font-weight: bold;
+}
+
+.subject-input{
+  width: 600px;
+  height: 30px;
+}
+
+.subject-label-container{
+  padding-bottom: 10px;
   font-weight: bold;
 }
 
