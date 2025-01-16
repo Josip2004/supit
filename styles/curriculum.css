@@ -48,13 +48,11 @@ main{
 }
 
 /*FOOTER:*/
+
 footer{
   position: relative;
-  height: 320px;
+  height: 280px;
   margin-top: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .footer-img{
@@ -62,7 +60,7 @@ footer{
   z-index: -1;
   width: 100%;
   object-fit: cover;
-  height: 320px;
+  height: 100%;
 }
 
 .content{
@@ -73,6 +71,8 @@ footer{
   text-align: center;
   padding-top: 60px;
   position: absolute;
+  top: 30px;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -85,7 +85,34 @@ footer{
   text-align: center;
   padding: 60px;
   position: absolute;
-  bottom: 20px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
+}
+ 
+
+@media screen and (max-width: 768px){
+  .content,
+  .content-color{
+    font-size: 30px;
+  }
+
+  .content{
+    margin-bottom: 10px;
+  }
+
+  .subject-input{
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .content,
+  .content-color{
+    font-size: 40px;
+  }
+
+  .content{
+    margin-bottom: 10px;
+  }
 }

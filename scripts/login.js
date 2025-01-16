@@ -23,7 +23,7 @@ form.addEventListener('submit', (event) => {
 
         if(response.isSuccess){
           sessionStorage.setItem('username', data.username);
-          sessionStorage.setItem('token', response.token);
+          sessionStorage.setItem('token', response.data.token);
           location.replace('main.html');
         }
         else{
@@ -38,5 +38,4 @@ form.addEventListener('submit', (event) => {
 
   login.send(JSON.stringify(data)); //pretvara data u json i salje ga kao POST
 });
-
 

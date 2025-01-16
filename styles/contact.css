@@ -3,7 +3,6 @@ body{
 }
 
 .modal{
-  display: none;
   position: fixed;
   background-color: white;
   width: 700px;
@@ -42,7 +41,7 @@ body{
 .title-of-input,
 .title-of-label{
   margin-top: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
