@@ -2,11 +2,7 @@ jQuery(document).ready(function() {
   jQuery("#contact-form").submit(function(e) {
 
     var form = jQuery(this);
-    if (!form.length) {
-      console.error("Form element nije pronađen!");
-      return;
-    }
-
+  
     // Provjerava jeli je checkbox označen i postavlja vrijednost
     var receiveNewsletter = jQuery("#receiveNewsletter").prop("checked") ? "true" : "false";
     

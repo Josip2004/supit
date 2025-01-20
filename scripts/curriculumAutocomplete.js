@@ -21,10 +21,11 @@ jQuery(document).ready(function () {
 
          if (Array.isArray(data.data)) {
             // Kreiraj listu s nazivima kolegija za prikaz, a ID za interno korištenje
-            const kolegiji = data.data.map(item => ({
-              label: item.kolegij, // Naziv kolegija 
-              value: item.id       // ID kolegija (koristi se za dohvat podataka)
-            }));
+            const kolegiji = data.data.filter(item => item.kolegij.toLowerCase().includes(request.term.toLowerCase()))  // Dodatno filtriranje na temelju unosa
+              .map(item => ({
+                label: item.kolegij, // Naziv kolegija 
+                value: item.id       // ID kolegija (koristi se za dohvat podataka)
+              }));
 
             response(kolegiji); // Popuni autocomplete
           } else {
@@ -52,8 +53,8 @@ jQuery(document).ready(function () {
           Authorization: `Bearer ${token}`
         },
         success: (data) => {   
-          count++;
-          if(count === 1){
+
+          if(jQuery('.container-header').length === 0 || count === 0){
             const containerHeader = `
           <div class="container-info subject-info">Kolegij</div>
           <div class="container-info">ECTS</div>
@@ -61,11 +62,10 @@ jQuery(document).ready(function () {
           <div class="container-info">Predavanja</div>
           <div class="container-info">Vježbe</div>
           <div class="container-info">Tip</div>
-          `
+          `;
 
           jQuery('.container-header').removeClass('no-border');
-          jQuery('.container-header').append(containerHeader);
-
+          jQuery('.container-header').append(containerHeader); 
           }
 
           
@@ -93,6 +93,7 @@ jQuery(document).ready(function () {
             sumPredavanja += parseFloat(data.data.predavanja);
             sumVjezbe += parseFloat(data.data.vjezbe);
             updateTotalRow();
+            count++;
           }
           else{
             console.log('error');
@@ -103,27 +104,30 @@ jQuery(document).ready(function () {
   });
 
   jQuery('#subjects-row').on('click', '.remove-button', function(){ //vezemo uz div subject-row
-    jQuery(this).closest('.row').remove(); //najbliz parent row
-    if(jQuery('#subjects-row .row').length === 0){
-      jQuery('.container-header').remove();
+    const row = jQuery(this).closest('.row'); //najbliz parent row
+
+    const ects = parseFloat(row.find('.row-cell').eq(1).text()) || 0;
+    const sati = parseFloat(row.find('.row-cell').eq(2).text()) || 0;
+    const predavanja = parseFloat(row.find('.row-cell').eq(3).text()) || 0;
+    const vjezbe = parseFloat(row.find('.row-cell').eq(4).text()) || 0;
+         
+     sumEcts -= ects;
+     sumSati -= sati;
+     sumPredavanja -= predavanja;
+     sumVjezbe -= vjezbe;
+
+     row.remove();
+
+     if(jQuery('#subjects-row .row').length === 0){
+       count = 0;
+       //jQuery('.container-header').remove();
+       jQuery('.container-header').empty();
+       jQuery('.container-header').addClass('no-border');
+       jQuery('.total-row').remove();
      }
 
-     sumEcts = 0;
-     sumSati = 0;
-     sumPredavanja = 0;
-     sumVjezbe = 0;
-
-     jQuery('#subjects-row .row').each(() => {
-       if(jQuery('#subjects-row .row').length >= 1){
-         sumEcts += parseFloat(jQuery(this).find('.row-cell').eq(1).text()); //eq trazi taj index retku
-         sumSati += parseFloat(jQuery(this).find('.row-cell').eq(2).text());
-         sumPredavanja += parseFloat(jQuery(this).find('.row-cell').eq(3).text());
-         sumVjezbe += parseFloat(jQuery(this).find('.row-cell').eq(4).text());
-       }
-
-       updateTotalRow();
-     });
-  })
+     
+  });
 
   function updateTotalRow() {
     // Ako redak za ukupno već postoji, ažuriraj ga
@@ -136,8 +140,8 @@ jQuery(document).ready(function () {
     } else {
       // Ako redak za ukupno ne postoji, dodaj ga
       const ukupnoRow = `
-        <div class="row total-row">
-          <div class="row-cell">Ukupno:</div>
+        <div class="total-row">
+          <div class="row-cell row-cell-sum-label">Ukupno:</div>
           <div class="row-cell">${sumEcts}</div>
           <div class="row-cell">${sumSati}</div>
           <div class="row-cell">${sumPredavanja}</div> 
@@ -150,6 +154,5 @@ jQuery(document).ready(function () {
     //uvijek mora biti na dnu
     jQuery('#subjects-row .total-row').appendTo('#subjects-row');
   }
-
 
 });
