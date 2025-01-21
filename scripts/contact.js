@@ -1,5 +1,7 @@
 jQuery(document).ready(function() {
   jQuery("#contact-form").submit(function(e) {
+    console.log("Forma je poslana.");
+    //e.preventDefault();
 
     var form = jQuery(this);
   
@@ -12,15 +14,14 @@ jQuery(document).ready(function() {
 
    
 
-    var actionUrl = form.attr('action'); // Uzimamo URL na koji šaljemo podatke
+
 
     jQuery.ajax({
-        type: "POST",
-        url: actionUrl,
+      url: "https://www.fulek.com/mvc/supit/project-contact-form",
+      type: "POST",
         data: formData, // Šaljemo podatke
         success: function(data) {
-          console.log('Uspjeh');
-          console.log(data);
+
         },
         error: function(data) {
           console.log('Greška');

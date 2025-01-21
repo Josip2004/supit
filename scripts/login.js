@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => {
         if(response.isSuccess){
           sessionStorage.setItem('username', data.username);
           sessionStorage.setItem('token', response.data.token);
-          location.replace('main.html');
+          location.replace('index.html');
         }
         else{
           alert('Greška kod prijave.')

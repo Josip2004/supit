@@ -13,16 +13,18 @@ body{
 .content-container {
   display: flex;
   gap: 220px;
+
 }
 
-.container-header-subject,
-.container-header {
+/* .container-header {
   display: flex;
   font-weight: bold;
   margin-bottom: 5px; 
-}
+} */
 
 .container-header {
+  flex-shrink: 1;
+  align-items: center;
   border-bottom: 2px solid black;
   border-top: 2px solid black;
   padding-right: 60px;
@@ -32,20 +34,18 @@ body{
   border: none;
 }
 
-.container-info {
+/* .container-info {
   width: 80px;
   padding: 8px 10px;
   text-align: center;
-}
+  flex-shrink: 1;
+} */
 #subjects-row{
   display: flex;
   flex-direction: column;
 }
 
-.subject-info{
-  margin-right: 100px;
-}
-
+.subject-info,
 .row-cell-subject{
   flex-grow: 1; 
   padding-right: 0; 
@@ -57,6 +57,7 @@ body{
   background-color: #f5f5f5; 
 }
 
+.container-header,
 .total-row,
 .row{
   display: flex;
@@ -69,6 +70,7 @@ body{
   border-bottom: 1px solid gray;
 }
 
+.container-info,
 .row-cell {
   width: 80px;
   padding: 8px 10px;
@@ -208,9 +210,45 @@ footer{
   }
 
 
+  .container-info{
+    font-size: 14px;
+    padding-right: 3px;
+  
+  }
+
+  .row-with-button{
+    flex-wrap: wrap;
+    margin-left: 20px;
+    padding-left: 0px;
+  }
+
+  .row-cell-sum-label,
+  .row-cell-subject{
+    margin-right: 35px;
+  }
+
+  .row-cell{
+    padding-right: 25px;
+  }
+
+  .total-row,
+  .row,
+  .container-header{
+    width: 110%;
+  }
+
+  .total-row
+  .row-cell:nth-child(5){
+    padding-left: 20px;
+  }
+
+  .row-cell:nth-child(5){
+    padding-left: 35px;
+    padding-right: 0px;
+  }
 }
 
-@media screen and (min-width: 768px){
+@media  (min-width: 768px) and (max-width: 1200px){
   .content,
   .content-color{
     font-size: 40px;
@@ -218,5 +256,48 @@ footer{
 
   .content{
     margin-bottom: 10px;
+  }
+
+  .content-container{
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .right-div-section{
+    font-size: 15px;
+    box-sizing: border-box;
+    width: 75%;
+  }
+
+  .container-info{
+    font-size: 14px;
+    padding-right: 3px;
+  
+  }
+
+  .row-with-button{
+    flex-wrap: wrap;
+    margin-left: 20px;
+    padding-left: 0px;
+  }
+
+  .row-cell-sum-label,
+  .row-cell-subject{
+    margin-right: 35px;
+  }
+
+  .row-cell{
+    padding-right: 25px;
+  }
+
+  .total-row,
+  .row,
+  .container-header{
+    width: 110%;
+  }
+
+  .row-cell:nth-child(5){
+    padding-left: 35px;
+    padding-right: 0px;
   }
 }
