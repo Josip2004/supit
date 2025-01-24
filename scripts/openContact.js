@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   openButton.addEventListener('click', function(e) {
     e.preventDefault();
-    openContactForm();
+    openContactForm(); //funkcija za otvaranje
   });
 
 
@@ -24,10 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
         return response.text();
       })
       .then(data => {
-        // Kreiramo novi div koji sadrzi modal
+        // Kreiramo novi div koji sadrzi ucitane podatke
         const modalDiv = document.createElement('div');
         modalDiv.innerHTML = data;
         document.body.appendChild(modalDiv);
+        //dodajemo modal na stranicu
 
         // Dohvatimo modal
         const modal = modalDiv.querySelector('#overlay');
@@ -41,14 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prikazujemo modal
         modal.style.display = 'block';
 
-        // Zatvaranje 
+        //TRI VRSTE ZATVARANJA:
+
+        // 1. Zatvaranje 
         const closeModal = modalDiv.querySelector('.cancel-button');
         closeModal.addEventListener('click', function() {
           modal.style.display = 'none';
           document.body.removeChild(modalDiv);
         });
 
-        // Zatvaranje ako kliknes negdje sa strane
+        // 2. Zatvaranje ako kliknes negdje sa strane
         modal.addEventListener('click', function(e) {
           if (e.target === modal) {
             modal.style.display = 'none';
@@ -56,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         });
 
-        // Zatvaranje ako ponovno kliknes Kontakt
+        // 3. Zatvaranje ako ponovno kliknes Kontakt
         if(modal.style.display = 'block'){
           openButton.addEventListener('click', () => {
             modal.style.display = 'none';

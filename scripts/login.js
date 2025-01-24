@@ -10,7 +10,7 @@ form.addEventListener('submit', (event) => {
   const data = {
     username: username.value,
     password: password.value
-  }
+  } //prikupljam podatke koje je korisnik upisao
 
   const login = new XMLHttpRequest(); //kreira novi http zahtjev
   login.open('POST', url); //postavla zahtjev na POST

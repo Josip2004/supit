@@ -1,7 +1,5 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function() { //kada se cijeli dokument ucita
   jQuery("#contact-form").submit(function(e) {
-    console.log("Forma je poslana.");
-    //e.preventDefault();
 
     var form = jQuery(this);
   
@@ -11,9 +9,6 @@ jQuery(document).ready(function() {
     // Sakupljanje svih podataka sa forme i dodavanje ReceiveNewsletter
     var formData = form.serializeArray(); // Koristimo serializeArray da dobijemo podatke u objektima
     formData.push({ name: "ReceiveNewsletter", value: receiveNewsletter }); // Dodajemo checkbox vrijednost
-
-   
-
 
 
     jQuery.ajax({

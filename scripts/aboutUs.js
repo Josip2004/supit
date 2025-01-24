@@ -10,6 +10,7 @@ document.addEventListener('scroll', () => {
   });
 });
 
+//kada kliknem Algebra grupa text bude opacity=1
 document.addEventListener('click', () => {
   groupParagraphs.forEach(paragraph => {
     if(IsVisible(paragraph)){
@@ -30,6 +31,7 @@ document.addEventListener('scroll', () => {
 
 const clickButton = document.querySelector('.history-link');
 
+//kada kliknem Povijest text bude opacity=1
 clickButton.addEventListener('click', () => {
   historyParagraphs.forEach(paragraph => {
     if(IsVisible(paragraph)) {
@@ -38,6 +40,7 @@ clickButton.addEventListener('click', () => {
   });
 });
 
+//Provjerava jeli cijeli element unatar viewporta
 function IsVisible(element){
   const view = element.getBoundingClientRect(); //vraca objekt sa top, right, bottom, left
   return (
