@@ -58,6 +58,7 @@
 .username-text{
   font-weight: bold;
   color: rgb(82, 168, 218);
+  margin-top: 16px;
 }
 
 .hamburger-menu{

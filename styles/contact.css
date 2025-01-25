@@ -26,6 +26,10 @@ body{
   margin-bottom: 20px;
 }
 
+.row{
+  border: none;
+}
+
 .contact-email-img{
   height: 50px;
 }

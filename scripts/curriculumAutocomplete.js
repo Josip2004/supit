@@ -124,7 +124,9 @@ jQuery(document).ready(function () {
        jQuery('.container-header').addClass('no-border');
        jQuery('.total-row').remove();
      }
-     updateTotalRow();
+     else{
+         updateTotalRow();
+     }
      
   });
 
