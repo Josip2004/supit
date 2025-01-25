@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
   const token = sessionStorage.getItem('token');
-  let count = 0;
+  let count = 0; // da provjerim postoji li container-header
   //za Ukupno sekciju
   let sumEcts = 0;
   let sumSati = 0;
@@ -14,12 +14,12 @@ jQuery(document).ready(function () {
         url: "https://www.fulek.com/data/api/supit/curriculum-list/hr",
         data: { term: request.term }, // Term je ono što korisnik upisuje
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,//ima vazeci token
         },
         success: (data) => {
           console.log("Dohvaćeni podaci:", data);
 
-         if (Array.isArray(data.data)) {
+         if (Array.isArray(data.data)) { 
             // Kreiraj listu s nazivima kolegija za prikaz, a ID za interno korištenje
             const kolegiji = data.data.filter(item => item.kolegij.toLowerCase().includes(request.term.toLowerCase()))  // Dodatno filtriranje na temelju unosa
               .map(item => ({
@@ -106,10 +106,10 @@ jQuery(document).ready(function () {
   jQuery('#subjects-row').on('click', '.remove-button', function(){ //vezemo uz div subject-row
     const row = jQuery(this).closest('.row'); //najbliz parent row
 
-    const ects = parseFloat(row.find('.row-cell').eq(1).text()) || 0;
-    const sati = parseFloat(row.find('.row-cell').eq(2).text()) || 0;
-    const predavanja = parseFloat(row.find('.row-cell').eq(3).text()) || 0;
-    const vjezbe = parseFloat(row.find('.row-cell').eq(4).text()) || 0;
+    const ects = parseFloat(row.find('.row-cell').eq(1).text());
+    const sati = parseFloat(row.find('.row-cell').eq(2).text());
+    const predavanja = parseFloat(row.find('.row-cell').eq(3).text());
+    const vjezbe = parseFloat(row.find('.row-cell').eq(4).text());
          
      sumEcts -= ects;
      sumSati -= sati;
@@ -118,14 +118,13 @@ jQuery(document).ready(function () {
 
      row.remove();
 
-     if(jQuery('#subjects-row .row').length === 0){
+     if(jQuery('#subjects-row .row').length === 0){ //provjerava postoji li koji redak jos
        count = 0;
-       //jQuery('.container-header').remove();
        jQuery('.container-header').empty();
        jQuery('.container-header').addClass('no-border');
        jQuery('.total-row').remove();
      }
-
+     updateTotalRow();
      
   });
 
@@ -149,7 +148,7 @@ jQuery(document).ready(function () {
           <div class="row-cell"></div> 
         </div>
       `;
-      jQuery('#subjects-row').append(ukupnoRow);
+      jQuery('#subjects-row').append(ukupnoRow); // dodaje ukupno
     }
     //uvijek mora biti na dnu
     jQuery('#subjects-row .total-row').appendTo('#subjects-row');
