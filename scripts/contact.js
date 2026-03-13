@@ -16,7 +16,7 @@ jQuery(document).ready(function() { //kada se cijeli dokument ucita
       type: "POST",
         data: formData, // Šaljemo podatke
         success: function(data) {
-
+          
         },
         error: function(data) {
           console.log('Greška');

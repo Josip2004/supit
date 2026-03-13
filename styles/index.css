@@ -29,7 +29,7 @@ body{
   margin-right: -0.2em;
   white-space: nowrap;
   animation: typing-headline 3s steps(32, end) forwards, /*32 koraka, end-svaki korak se zavrsi prije nego sto krene dalje*/
-  blinking-headline 0.75s step-end infinite 0.5s forwards, /*zadrzava posljednje stanje animacije*/
+  blinking-headline 0.75s step-end infinite 0.5s , /*zadrzava posljednje stanje animacije*/
   remove-border 0.01s forwards 3s; /*nakon 3s nestaje border*/
   color: white;
   font-size: 45px;
@@ -45,17 +45,17 @@ body{
   margin-right: -0.2em;
   width: 8ch;
   white-space: nowrap;
-  display: inline-block; /*2 DISPLAYA IMAS!*/
   color: rgb(182, 28, 28);
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
   font-weight: bold;
   display: block;
   font-size: 45px;
   opacity: 0;
-  animation: typing-inside 1.2s steps(8, end) forwards 3s,
+  animation: typing-inside 1.2s steps(8) forwards 3s,
   blinking-inside 0.75s step-end infinite  0.5s forwards,
   border-visible 0s forwards 3.1s;
 }
+
 
 
 /*Animacije za headline*/

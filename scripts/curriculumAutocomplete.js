@@ -8,6 +8,17 @@ jQuery(document).ready(function () {
   let sumVjezbe = 0;
   jQuery('.container-header').addClass('no-border');
 
+
+document.querySelector('.subject-input').addEventListener('keypress', (e)=>{
+  if(e.key === 'Enter'){
+    let fRow = document.querySelector('.ui-menu-item-wrapper');
+    if(fRow){
+      fRow.click();
+  
+    }
+  }
+})
+
   jQuery(".subject-input").autocomplete({
     source: (request, response) => {
       jQuery.ajax({
@@ -46,6 +57,8 @@ jQuery(document).ready(function () {
       const kolegijID = ui.item.value;
 
       jQuery(".subject-input").val(kolegijSelected);
+
+      jQuery(".subject-input").val('');
 
       jQuery.ajax({
         url: `https://www.fulek.com/data/api/supit/get-curriculum/${kolegijID}`,

@@ -25,7 +25,7 @@ const updateHeader = () => {
       logoutElement.addEventListener('click', () => {
         sessionStorage.removeItem('token');
         sessionStorage.removeItem('username');
-        location.reload(); //za refresh, ponovno ucita url
+        location.replace('index.html'); //za refresh, ponovno ucita url
       });
 
       //dodaj elemente u header
@@ -56,3 +56,4 @@ hamburgerMenu.addEventListener('click', () => {
 
   document.querySelector('.header').classList.toggle('expanded');
 });
+

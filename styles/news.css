@@ -19,8 +19,9 @@ main{
   margin-top: 125px;
   margin-bottom: 40px;
   width: 60%;
-  animation: title-pop-down 0.8s linear;;
+  animation: title-pop-down 0.8s linear;
 }
+
 
 @keyframes title-pop-down {
   0%{
@@ -38,10 +39,12 @@ main{
   background-color: rgb(247, 246, 246);
   padding: 44px;
   margin-top: 80px;
+  
 }
 
 .news-image-link{
   animation: appear-news 0.8s linear;
+  border-radius: 50%;
 }
 
 @keyframes appear-news {
@@ -57,7 +60,7 @@ main{
 
 .image-container{
   position: relative;
-  border-radius: 320px;
+
   width: 320px;
   height: 320px;
   border: 15px solid rgb(236, 230, 230);
@@ -66,11 +69,13 @@ main{
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  border-radius: 50%;
 }
 
 .image-news{
   height: 100%;
   width: 100%;
+  border-radius: 50%;
   object-fit: cover;
 }
 

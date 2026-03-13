@@ -1,3 +1,18 @@
+
+document.addEventListener('DOMContentLoaded', ()=> {
+
+  const polje = [1,2,3,4,5,6];
+  const para = document.getElementById('br');
+
+  for (let index = 0; index < polje.length; index++) {
+    
+    if(polje[index] % 3 === 0){
+      para.innerText += ` ${polje[index]}`;
+    }
+    
+  }
+})
+
 const historyParagraphs = document.querySelectorAll('.history-text'); //skupi sve elemente sa .history-text klasom
 const groupParagraphs = document.querySelectorAll('.algebra-group-text');
 
@@ -48,6 +63,8 @@ function IsVisible(element){
       (window.innerHeight - 150 || document.documentElement.clientHeight - 150)
   ); // ako je unutar viewporta -> true
 }
+
+
 
 
 
